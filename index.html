@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- TODO change title -->
+    <title>
+      Adaptive Whole-body Robotic Tool-use Learning on Low-rigidity Plastic-made Humanoids Using Vision and Tactile Sensors
+    </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/main.css">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1XJ0NHR591"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-1XJ0NHR591');
+    </script>
+
+    <meta property="og:url"           content="https://haraduka.github.io/wholebody-tooluse" />
+    <meta property="og:type"          content="website" />
+    <meta property="og:title"         content="
+      Adaptive Whole-body Robotic Tool-use Learning on Low-rigidity Plastic-made Humanoids Using Vision and Tactile Sensors
+    " />
+    <meta property="og:description"   content="
+    Various robots have been developed so far; however, we face challenges in modeling the low-rigidity bodies of some robots.
+    In particular, the deflection of the body changes during tool-use due to object grasping, resulting in significant shifts in the tool-tip position and the body's center of gravity.
+    Moreover, this deflection varies depending on the weight and length of the tool, making these models exceptionally complex.
+    However, there is currently no control or learning method that takes all of these effects into account.
+    In this study, we propose a method for constructing a neural network that describes the mutual relationship among joint angle, visual information, and tactile information from the feet.
+    We aim to train this network using the actual robot data and utilize it for tool-tip control.
+    Additionally, we employ Parametric Bias to capture changes in this mutual relationship caused by variations in the weight and length of tools, enabling us to understand the characteristics of the grasped tool from the current sensor information.
+    We apply this approach to the whole-body tool-use on KXR, a low-rigidity plastic-made humanoid robot, to validate its effectiveness.
+    " />
+    <meta property="og:image" content="https://haraduka.github.io/wholebody-tooluse/assets/img/banner.png" />
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-8 offset-lg-2 col-md-12">
+
+          <div class="text-center">
+            <h1 class="mt-5"><b>Adaptive Whole-body Robotic Tool-use Learning</b></h1>
+            <h2 class="mt-3"><b>on Low-rigidity Plastic-made Humanoids Using Vision and Tactile Sensors</b></h1>
+            <ul class="list-inline mt-4">
+              <li class="list-inline-item"><a href="https://haraduka.github.io" target="_blank">Kento Kawaharazuka</a></li>
+              <li class="list-inline-item ml-4">Kei Okada</li>
+              <li class="list-inline-item ml-4">Masayuki Inaba</li>
+              <li class="mt-2">
+                JSK Robotics Laboratory, The University of Tokyo, Japan
+              </li>
+            </ul>
+            <ul class="list-inline mt-4">
+              <li class="list-inline-item">
+                <a href="https://arxiv.org/abs/2405.03440" target="_blank">Paper</a>
+              </li>
+              <li class="list-inline-item ml-4">
+                <a href="https://youtu.be/cg7bFTj_hPo" target="_blank">Video</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="row mt-4">
+            <div class="col-lg-10 offset-lg-1">
+              <p>
+    Various robots have been developed so far; however, we face challenges in modeling the low-rigidity bodies of some robots.
+    In particular, the deflection of the body changes during tool-use due to object grasping, resulting in significant shifts in the tool-tip position and the body's center of gravity.
+    Moreover, this deflection varies depending on the weight and length of the tool, making these models exceptionally complex.
+    However, there is currently no control or learning method that takes all of these effects into account.
+    In this study, we propose a method for constructing a neural network that describes the mutual relationship among joint angle, visual information, and tactile information from the feet.
+    We aim to train this network using the actual robot data and utilize it for tool-tip control.
+    Additionally, we employ Parametric Bias to capture changes in this mutual relationship caused by variations in the weight and length of tools, enabling us to understand the characteristics of the grasped tool from the current sensor information.
+    We apply this approach to the whole-body tool-use on KXR, a low-rigidity plastic-made humanoid robot, to validate its effectiveness.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-10 offset-lg-1"><hr class="mt-4 mb-4"></div>
+          <div class="col-lg-10 offset-lg-1">
+            <h4>Whole-body Robotic Tool-use Learning for Low-Rigidity Robots</h4>
+            <p>
+            The concept of this study: learning the mutual relationship among joint angle, center of gravity, tool-tip position, and tool-tip screen coordinates for adaptive whole-body tool-use of low-rigidity robots considering the changes in tool weight and length.
+            </p>
+            <div align="center" class="row mt-4">
+              <div class="col-lg-8 offset-lg-2">
+                <img src="assets/img/concept.png" class="img-fluid">
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-10 offset-lg-1"><hr class="mt-4 mb-4"></div>
+          <div class="col-lg-10 offset-lg-1">
+            <h4>System Overview</h4>
+            <p>
+            System overview of Whole-body Tool-use Network with Parametric Bias (WTNPB) including Data Collector, Network Trainer, Online Updater, and Tool-Tip Controller for Low-Rigidity Robots.
+            </p>
+            <div align="center" class="row mt-4">
+              <div class="col-lg-10 offset-lg-1">
+                <img src="assets/img/system-overview.png" class="img-fluid">
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-10 offset-lg-1"><hr class="mt-4 mb-4"></div>
+          <div class="col-lg-10 offset-lg-1">
+            <h4>Experimental Setup</h4>
+            <p>
+            Six types of tool states with various weights and lengths used in this study.
+            </p>
+            <div align="center" class="row mt-4 mb-4">
+              <div class="col-lg-6 offset-lg-3">
+                <img src="assets/img/experimental-setup.png" class="img-fluid">
+              </div>
+            </div>
+            <p>
+            The change in tool-tip position and center of gravity when handling tools with different weights.
+            </p>
+            <div align="center" class="row mt-4">
+              <div class="col-lg-6 offset-lg-3">
+                <img src="assets/img/flex-feature.png" class="img-fluid">
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-10 offset-lg-1"><hr class="mt-4 mb-4"></div>
+          <div class="col-lg-10 offset-lg-1">
+            <h4>Simulation Experiments</h4>
+            <p>
+            The trained parametric bias in the simulation experiment.
+            It can be observed that each PB aligns neatly along the axes of tool weight and length.
+            </p>
+            <div align="center" class="row mt-4 mb-4">
+              <div class="col-lg-6 offset-lg-3">
+                <img src="assets/img/sim-pb.png" class="img-fluid">
+              </div>
+            </div>
+            <p>
+            The trajectory of parametric bias when PB is updated online while sending random joint angles to the robot.
+            It can be observed that the current PB values gradually approach the trained PB values for Long/Light or Short/Heavy.
+            </p>
+            <div align="center" class="row mt-4 mb-4">
+              <div class="col-lg-10 offset-lg-1">
+                <img src="assets/img/sim-update.gif" class="img-fluid">
+              </div>
+            </div>
+            <p>
+            We examined how PB values transition in three scenarios of data availability.
+            </p>
+            <div align="center" class="row mt-4 mb-4">
+              <div class="col-lg-10 offset-lg-1">
+                <img src="assets/img/sim-update2.gif" class="img-fluid">
+              </div>
+            </div>
+            <p>
+            Finally, we conduct control experiments incorporating online update of PB.
+            We initiate the current PB as Long/Light, and sequentially transition the actual tool states to Long/Heavy and Short/Heavy.
+            It can be observed that PB transitions from Long/Light to Long/Heavy and then to Short/Heavy as intended.
+            Initially in the Long/Heavy state, we can see a slight reduction in control error and a significant decrease in COG error by the update of PB.
+            In the subsequent transition to the Short/Heavy state, significant changes in control error are observed, while there is no significant variation in COG error.
+            </p>
+            <div align="center" class="row mt-4 mb-4">
+              <div class="col-lg-10 offset-lg-1">
+                <img src="assets/img/sim-control.gif" class="img-fluid">
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-10 offset-lg-1"><hr class="mt-4 mb-4"></div>
+          <div class="col-lg-10 offset-lg-1">
+            <h4>Actual Robot Experiments</h4>
+            <p>
+            PB was updated online while setting the tool state to Long/Light or Short/Heavy, and sending random joint angles to the robot.
+            It can be observed that the current PB gradually approaches the trained PB of Long/Light or Short/Heavy.
+            </p>
+            <div align="center" class="row mt-4 mb-4">
+              <div class="col-lg-10 offset-lg-1">
+                <img src="assets/img/act-update.gif" class="img-fluid">
+              </div>
+            </div>
+            <p>
+            We compared control errors for the Long/Middle tool state when solving whole-body inverse kinematics using a geometric model, when using WTNPB trained with the simulation data including joint deflection, and when using WTNPB fine-tuned with the actual robot data.
+            The geometric model exhibits the largest error, followed by training from the simulation data with joint deflection, and finally, the smallest control error is achieved after fine-tuning in the actual robot.
+            </p>
+            <div align="center" class="row mt-4">
+              <div class="col-lg-8 offset-lg-2">
+                <img src="assets/img/act-control.png" class="img-fluid">
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-10 offset-lg-1"><hr class="mt-4 mb-4"></div>
+          <div class="col-lg-10 offset-lg-1">
+            <div class="mt-4">
+              <h4>Integrated Experiment</h4>
+              <p>
+              We conducted an integrated experiment that combined online update and tool-tip position control on the actual robot.
+              The task involved using the tool to open a window located at a high position.
+              We initiated the PB in the Short/Heavy state and the robot grasped the Long/Light tool.
+              While performing random movements, the current PB was updated online and then the robot positioned itself in front of the window by walking sideways.
+              The 3D position of the window was recognized from an AR marker attached to it.
+              Subsequently, the robot extended the tool-tip position to the left of the window by 60 mm and then moved it 80 mm to the right to open the window.
+              The entire sequence of actions was successful, demonstrating the feasibility of a series of tool manipulation tasks on a low-rigidity robot.
+              </p>
+              <div align="center" class="row mt-4">
+                <div class="col-lg-10 offset-lg-1">
+                  <img src="assets/img/integrated.gif" class="img-fluid">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- bibtex -->
+          <div class="col-lg-10 offset-lg-1"><hr class="mt-4 mb-4"></div>
+          <div class="col-lg-10 offset-lg-1">
+            <h4 id="bibtex">Bibtex</h4>
+            <pre>
+@inproceedings{kawaharazuka2024kxr,
+  author={K. Kawaharazuka and K. Okada and M. Inaba},
+  title={{Adaptive Whole-body Robotic Tool-use Learning on Low-rigidity Plastic-made Humanoids Using Vision and Tactile Sensors}},
+  booktitle="2024 IEEE International Conference on Robotics and Automation",
+  year=2024,
+}
+            </pre>
+          </div>
+
+          <!-- contact -->
+          <div class="col-lg-10 offset-lg-1"><hr class="mt-4 mb-4"></div>
+          <div class="col-lg-10 offset-lg-1 mb-5">
+            <h4 id="contact">Contact</h4>
+            <p>
+            If you have any questions, please feel free to contact
+            <a href="https://haraduka.github.io" target="_blank">Kento Kawaharazuka</a>.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
