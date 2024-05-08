@@ -9,6 +9,10 @@ h1, h2, h3, h4, h5 {
   color: #555555;
 }
 
+.conf {
+  color: #990012;
+}
+
 body {
   font-family: "Product Sans", Helvetica, sans-serif;;
   color: #787878;
